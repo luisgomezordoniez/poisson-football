@@ -65,32 +65,6 @@ npm run build
 
 The built files go into `dist/` and can be deployed anywhere (GitHub Pages, Netlify, Vercel, etc.).
 
-## Deploy to GitHub Pages
-
-1. Install the deploy dependency:
-
-```bash
-npm install -D gh-pages
-```
-
-2. Add to `package.json` scripts:
-
-```json
-"deploy": "npm run build && gh-pages -d dist"
-```
-
-3. Set `base` in `vite.config.js` to your repo name:
-
-```js
-base: '/your-repo-name/',
-```
-
-4. Deploy:
-
-```bash
-npm run deploy
-```
-
 ## Project Structure
 
 ```
