@@ -28,8 +28,8 @@ const LEAGUES = {
   "French Ligue 1": 4334,
   "Dutch Eredivisie": 4337,
   "Portuguese Primeira Liga": 4344,
-  "Belgian First Division A": 4355,
-  "Scottish Premiership": 4330,
+  "Belgian Pro League": 4338,
+  "Scottish Premier League": 4330,
   "Turkish Super Lig": 4339,
 };
 
@@ -86,7 +86,9 @@ async function main() {
   }
 
   // Add common football-data.co.uk name mappings that differ from TheSportsDB
+  // Add common football-data.co.uk name mappings that differ from TheSportsDB
   const ALIASES = {
+    // English
     "Man City": "Manchester City",
     "Man United": "Manchester United",
     "Nott'm Forest": "Nottingham Forest",
@@ -95,11 +97,15 @@ async function main() {
     "West Ham": "West Ham United",
     "Newcastle": "Newcastle United",
     "Tottenham": "Tottenham Hotspur",
+    
+    // German
     "Ein Frankfurt": "Eintracht Frankfurt",
     "M'gladbach": "Borussia Monchengladbach",
     "Dortmund": "Borussia Dortmund",
     "FC Köln": "FC Cologne",
     "Leverkusen": "Bayer Leverkusen",
+    
+    // Spanish
     "Atlético Madrid": "Atletico Madrid",
     "Betis": "Real Betis",
     "Celta Vigo": "Celta de Vigo",
@@ -108,9 +114,63 @@ async function main() {
     "Ath Bilbao": "Athletic Bilbao",
     "Athletic Bilbao": "Athletic Club",
     "Espanol": "Espanyol",
+    
+    // Italian
     "Hellas Verona": "Verona",
     "AC Milan": "Milan",
     "Parma": "Parma Calcio 1913",
+
+    // Netherlands
+    "Zwolle": "PEC Zwolle",
+    "Volendam": "FC Volendam",
+
+    // Portugal
+    "Sp Lisbon": "Sporting CP",
+    "Guimaraes": "Vitória de Guimarães",
+    "Sp Braga": "Sporting Braga",
+
+    // Belgium
+    "St. Gilloise": "Union SG",         // Union Saint-Gilloise
+    "St Truiden": "Sint-Truiden",
+    "Waregem": "Zulte Waregem",
+    "Standard": "Standard Liège",
+    "RAAL La Louviere":"RAAL La Louvière",
+    "Oud-Heverlee Leuven": "OH Leuven",
+    
+
+    // Scotland (All 12 Teams)
+    "Hearts": "Heart of Midlothian",
+    "Celtic": "Celtic",
+    "Rangers": "Rangers",
+    "Motherwell": "Motherwell",
+    "Hibernian": "Hibernian",
+    "Falkirk": "Falkirk",
+    "Aberdeen": "Aberdeen",
+    "Dundee United": "Dundee United",
+    "Dundee": "Dundee",
+    "St Mirren": "St. Mirren",
+    "Livingston": "Livingston",
+    "Kilmarnock": "Kilmarnock",
+
+    // Turkey (All 18 Teams from your data)
+    "Galatasaray": "Galatasaray",
+    "Fenerbahce": "Fenerbahçe",
+    "Trabzonspor": "Trabzonspor",
+    "Goztep": "Göztepe",
+    "Besiktas": "Beşiktaş",
+    "Buyuksehyr": "İstanbul Başakşehir", 
+    "Samsunspor": "Samsunspor",
+    "Gaziantep": "Gaziantep FK",
+    "Kocaelispor": "Kocaelispor",
+    "Rizespor": "Çaykur Rizespor",
+    "Alanyaspor": "Alanyaspor",
+    "Genclerbirligi": "Gençlerbirliği",
+    "Konyaspor": "Konyaspor",
+    "Kasimpasa": "Kasımpaşa",
+    "Antalyaspor": "Antalyaspor",
+    "Eyupspor": "Eyüpspor",
+    "Kayserispor": "Kayserispor",
+    "Karagumruk": "Fatih Karagümrük"
   };
 
   for (const [alias, canonical] of Object.entries(ALIASES)) {
