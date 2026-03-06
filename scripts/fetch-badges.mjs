@@ -106,7 +106,7 @@ async function main() {
     "Leverkusen": "Bayer Leverkusen",
     
     // Spanish
-    "Atlético Madrid": "Atletico Madrid",
+    "Ath Madrid": "Atletico Madrid",
     "Betis": "Real Betis",
     "Celta Vigo": "Celta de Vigo",
     "Vallecano": "Rayo Vallecano",
